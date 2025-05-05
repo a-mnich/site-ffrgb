@@ -33,7 +33,7 @@ pushd "${gluon_build_dir}"
 # Check if there are any patches at all
 if ! compgen -G "${gluon_patch_dir}/*.patch" >/dev/null; then
     echo "No patches found in ${gluon_patch_dir}/*.patch"
-    exit 1
+    exit 0
 fi
 
 # Reset previously applied patches
