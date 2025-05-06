@@ -1,0 +1,19 @@
+name: Build (Bare Metal)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: build with docker
+        run: |
+          docker build -t ffrgb -f dockerfile_build .
+          docker run -v ($pwd):/ffrgb ffrgb /ffrgb/scripts/entrypoint.sh
+      - name: upload firmware
+        uses: actions/upload-artifact@v4
+        with:
+          name: firmware
+          path: output
