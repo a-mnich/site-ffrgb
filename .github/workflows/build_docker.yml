@@ -11,7 +11,8 @@ jobs:
       - name: build with docker
         run: |
           docker build -t ffrgb -f dockerfile_build .
-          docker run -v ($pwd):/ffrgb ffrgb /ffrgb/scripts/entrypoint.sh
+          docker run -v $(pwd):/ffrgb ffrgb make
+          ls -la
       - name: upload firmware
         uses: actions/upload-artifact@v4
         with:

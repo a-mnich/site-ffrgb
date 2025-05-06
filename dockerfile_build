@@ -14,4 +14,4 @@ RUN mkdir /tmp/ec &&\
     mv bin/ec-${TARGETOS}-${TARGETARCH} /usr/local/bin/editorconfig-checker &&\
     rm -rf /tmp/ec
 
-WORKDIR /gluon
+WORKDIR /ffrgb

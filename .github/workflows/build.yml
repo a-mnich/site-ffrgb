@@ -12,6 +12,7 @@ jobs:
         run: |
           scripts/install_build_dependencies.sh
           make
+          ls -la
       - name: upload firmware
         uses: actions/upload-artifact@v4
         with:
