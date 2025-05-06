@@ -1,4 +1,4 @@
-name: Build (Bare Metal)
+name: Build (Docker)
 
 on:
   workflow_dispatch:
