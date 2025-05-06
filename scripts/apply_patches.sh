@@ -22,6 +22,12 @@ function reset_gluon_build_dir() {
     echo "Environment reset."
 }
 
+# Exit gracefully if no patch directory found
+if [[ ! -d "${gluon_patch_dir}" ]]; then
+    echo "No patch directory found. Aborting."
+    exit 0
+fi
+
 # Relative patches folder does not work with git-apply below. Make sure it is an absolute path.
 if [[ ! ${gluon_patch_dir} =~ ^/ ]]; then
     gluon_patch_dir="${PWD}/${gluon_patch_dir}"

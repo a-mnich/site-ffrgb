@@ -38,4 +38,20 @@ apt-get -y --no-install-recommends install \
     tar \
     unzip \
     wget \
-    python3-distutils
+    python3-distutils \
+    build-essential \
+    clang \
+    ecdsautils \
+    libelf-dev \
+    libnss-unknown \
+    libssl-dev \
+    llvm \
+    lua-check \
+    openssh-client \
+    python3-dev \
+    python3-pyelftools \
+    python3-setuptools \
+    shellcheck \
+    swig \
+    time \
+    zlib1g-dev \
